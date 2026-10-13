@@ -29,3 +29,7 @@ main {
     border-bottom: 1px solid black;
   }
 }
+nav img {
+  display: block;
+  margin-bottom: 1rem;
+}
