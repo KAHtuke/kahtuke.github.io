@@ -1,12 +1,32 @@
+:root {
+  /* TODO: nahradiť odhady presnými hex kódmi z originálu plagátu */
+  --krem: #FFF6DE;
+  --cervena: #B30000;
+  --tmavocervena: #8B0000;
+  --zlta: #FFBE0B;
+  --zlta-fei: #EAAA00; /* oficiálna FEI, Pantone 124C */
+  --text: #2B2326;
+  --hneda: #4A1F00;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  background: var(--krem);
+  color: var(--text);
+}
+
+.stranka {
+  display: flex;
+  flex: 1;
 }
 
 nav {
   padding: 1rem;
-  border-right: 1px solid black;
+  background: var(--zlta);
+  color: var(--hneda);
 }
 
 nav ul {
@@ -15,21 +35,50 @@ nav ul {
   padding: 0;
 }
 
+nav a {
+  color: var(--hneda);
+}
+
+nav a:hover {
+  color: var(--cervena);
+}
+
+nav img {
+  display: block;
+  margin-bottom: 1rem;
+}
+
 main {
   padding: 1rem;
   max-width: 40rem;
 }
 
+main a {
+  color: var(--tmavocervena);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  background: var(--zlta-fei);
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+footer img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
 @media (max-width: 600px) {
-  body {
+  .stranka {
     flex-direction: column;
   }
-  nav {
-    border-right: none;
-    border-bottom: 1px solid black;
-  }
-}
-nav img {
-  display: block;
-  margin-bottom: 1rem;
 }
